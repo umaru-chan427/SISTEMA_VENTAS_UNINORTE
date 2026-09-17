@@ -17,7 +17,7 @@
             
              );
 
-                echo "Conexión exitosa a la base de datos";
+               // echo "Conexión exitosa a la base de datos";
                 return $this->dbh;
 
              }catch (PDOException $e){
