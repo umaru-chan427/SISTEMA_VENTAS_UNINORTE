@@ -691,7 +691,8 @@
       <div class="br-pagebody">
         <div class="br-section-wrapper">
           <h6 class="tx-gray-800 tx-uppercase tx-bold tx-14 mg-b-10">MANTENIMIENTO DE PRODUCTOS</h6>
-          <p class="mg-b-25 mg-lg-b-50">Searching, ordering and paging goodness will be immediately added to the table, as shown in this example.</p>
+
+          <button id="btnnuevo" class="btn btn-primary btn-block mg-b-10">Nuevo Registro</button>
 
           <div class="table-wrapper">
             <table id="producto_data" class="table display responsive nowrap">
@@ -703,16 +704,7 @@
                 </tr>
               </thead>
               <tbody>
-                <!-- <tr>
-                  <td>Coca Cola 2L descartable</td>
-                  <td><div><i class="fa fa-pencil"></i></div></td>
-                  <td><div><i class="fa fa-trash"></i></div></td>
-                </tr>
-                 <tr>
-                  <td>Agua Mineral 3L descartable</td>
-                  <td><div><i class="fa fa-pencil"></i></div></td>
-                  <td><div><i class="fa fa-trash"></i></div></td>
-                </tr> -->
+
               </tbody>
             </table>
           </div>
@@ -720,6 +712,8 @@
 
     </div><!-- br-mainpanel -->
     <!-- ########## END: MAIN PANEL ########## -->
+
+     <?php require_once("modalmantenimiento.php") ?>
 
     <script src="../../public/lib/jquery/jquery.js"></script>
     <script src="../../public/lib/popper.js/popper.js"></script>
@@ -733,31 +727,10 @@
     <script src="../../public/lib/datatables-responsive/dataTables.responsive.js"></script>
 
     <script src="../../public/js/bracket.js"></script>
-    <script src="mntproducto.js"></script>
-     <!-- <script>
+
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@10"></script>
     
-      $(function(){
-        'use strict';
-
-        $('#datatable1').DataTable({
-          responsive: true,
-          language: {
-            searchPlaceholder: 'Buscar...',
-            sSearch: '',
-            lengthMenu: '_MENU_ item/página',
-          }
-        });
-
-        $('#datatable2').DataTable({
-          bLengthChange: false,
-          searching: false,
-          responsive: true
-        });
-
-        // Select2
-        $('.dataTables_length select').select2({ minimumResultsForSearch: Infinity });
-
-      });
-    </script> -->
+    <script src="mntproducto.js"></script>
+    
   </body>
 </html>
