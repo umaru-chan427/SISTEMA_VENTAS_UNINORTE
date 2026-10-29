@@ -36,15 +36,17 @@
             }
             break;
 
-        case "mostrar":
-            $datos=$producto->get_producto_x_id($_POST["id_producto"]);
-            if(is_array($datos)==true and count($datos)>0){
-                foreach($datos as $row){
-                    $output["id_producto"] = $row["id_producto"];
-                    $output["nom_prod"] = $row["nom_prod"];
-                }
-            }
-            break;
+case "mostrar":
+    $datos = $producto->get_producto_x_id($_POST["id_producto"]);
+    // Asegúrate de recorrer y retornar en formato JSON puro:
+    if(is_array($datos)==true and count($datos)>0){
+        foreach($datos as $row){
+            $output["id_producto"] = $row["id_producto"];
+            $output["nom_prod"] = $row["nom_prod"];
+        }
+        echo json_encode($output);
+    }
+    break;
 
         case "eliminar":
             $producto->delete_producto($_POST["id_producto"]);

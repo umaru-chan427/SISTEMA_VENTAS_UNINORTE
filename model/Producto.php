@@ -116,10 +116,10 @@ class Producto extends Conectar
         return $resultado;
     }
 
-    public function update_producto($prod_id, $prod_nom){
+    public function update_producto($id_producto, $nom_prod){
         $conectar=parent::conexion();
         parent::set_names();
-        $sql="UPDATE tb_producto
+        $sql="UPDATE tm_producto
             SET
                 nom_prod=?,
                 fecha_modificacion=now()
